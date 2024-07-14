@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Light Show</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #000;
+        }
+        canvas {
+            width: 100%;
+            height: 100%;
+        }
+        #controls {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #fff;
+        }
+        button, select {
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            background: #444;
+            color: #ddd;
+            border: none;
+            cursor: pointer;
+        }
+        select {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="lightCanvas"></canvas>
+    <div id="controls">
+        <select id="effectType">
+            <option value="softGlow">Soft Glow</option>
+            <option value="sharpLines">Sharp Lines</option>
+            <option value="fadedSparkle">Faded Sparkle</option>
+        </select>
+        <button onclick="clearEffects()">Clear Effects</button>
+    </div>
+    <script src="lightshow.js"></script>
+</body>
+</html>
